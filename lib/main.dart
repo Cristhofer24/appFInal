@@ -30,6 +30,7 @@ class MainApp extends StatelessWidget {
       routes: {
         '/': (context) => Loginscreen(), // Pantalla inicial
         '/registro': (context) => const Registerscreen(),
+        '/movieScreen': (context) => const Moviescreen(),
         '/movieApp': (context) => const ApiMovie(),
         '/multimedia': (context) => const Multimedia(), 
       // '/multimedia': (context) {
