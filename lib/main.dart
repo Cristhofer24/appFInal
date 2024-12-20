@@ -1,4 +1,5 @@
 // import 'package:app_moviefinal/Screens/loginScreen.dart';
+import 'package:app_moviefinal/Screens/loginScreen.dart';
 import 'package:app_moviefinal/Screens/movieScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -21,7 +22,7 @@ class MainApp extends StatelessWidget {
       //Modo oscuro o claro aqui
 
        
-      home: Moviescreen(),
+      home: Loginscreen(),
      
     );
   }
