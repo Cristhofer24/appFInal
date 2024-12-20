@@ -6,7 +6,6 @@
     String posterPath;
     String releaseDate;
     double voteAverage;
-     String videoUrl;
 
 Movie({
     required this.title,
@@ -16,7 +15,7 @@ Movie({
     required this.posterPath,
     required this.releaseDate,
     required this.voteAverage,
-    required this.videoUrl, 
+  
     
   });
 
@@ -29,7 +28,6 @@ factory Movie.fromJson(Map<String, dynamic> json) {
       posterPath: json['poster_path'],
       releaseDate: json['release_date'] ,
       voteAverage: json['vote_average'].toDouble(),
-      videoUrl: json['video_url'], 
     );
   }
 

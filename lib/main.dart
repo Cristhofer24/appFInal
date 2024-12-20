@@ -1,6 +1,9 @@
 // import 'package:app_moviefinal/Screens/loginScreen.dart';
 import 'package:app_moviefinal/Screens/loginScreen.dart';
 import 'package:app_moviefinal/Screens/movieScreen.dart';
+import 'package:app_moviefinal/Screens/multimedia.dart';
+import 'package:app_moviefinal/Screens/registerScreen.dart';
+import 'package:app_moviefinal/Screens/screenApiAntiguo.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -18,11 +21,22 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       //Modo oscuro o claro aqui
 
        
-      home: Loginscreen(),
+     debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Loginscreen(), // Pantalla inicial
+        '/registro': (context) => const Registerscreen(),
+        '/movieApp': (context) => const ApiMovie(),
+        '/multimedia': (context) => const Multimedia(), 
+      // '/multimedia': (context) {
+      //   final args = ModalRoute.of(context)!.settings.arguments as String;
+      //   return Multimedia(videoUrl: args);
+      //   },
+      },
      
     );
   }
